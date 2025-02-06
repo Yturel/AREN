@@ -1,0 +1,576 @@
+@import url('https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda');
+@import url('https://fonts.cdnfonts.com/css/nunito');
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'The Wild Breath of Zelda', sans-serif;
+    color: #fff;
+    background-color: #60C1F3;
+}
+
+img {
+    width: -webkit-fill-available;
+    max-width: 100%;
+}
+
+/* Loading Overlay Styles */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Fully dark background */
+    transition: 1s 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it covers everything */
+}
+
+#loading img {
+    width: 300px;
+    height: auto;
+}
+
+/* Start Header */
+.header {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 4%;
+    z-index: 20;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.header .navbar a {
+    font-family: 'The Wild Breath of Zelda', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.header-mobile {
+    display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    z-index: 20;
+}
+
+.header-mobile .header-mobile-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-top: -20px;
+    background-image: url(../images/mobile-menu-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-mobile .logo img {
+    width: 90px;
+}
+
+.header-mobile .burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header-mobile .burger-menu-icon {
+    background: transparent;
+    border: 0;
+    width: 38px;
+    cursor: pointer;
+} 
+
+.header-mobile .menu-toggle {
+    display: none;
+    padding: 30px;
+    margin-top: 7px;
+    background-image: url(../images/submenu-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.header-mobile .menu-toggle.open {
+    display: block;
+}
+
+.header-mobile .menu-toggle a {
+    color: #fff;
+    font-size: 28px;
+}
+
+.header-mobile .menu-toggle .submenu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-mobile .menu-toggle .submenu-list img {
+    width: 7%;
+    padding: 10px 0;
+}
+
+/* End Header */
+
+/* Start Hero */
+
+.hero-elements,
+.gameplay,
+.gameplay-2,
+.download,
+.footer {
+    position: relative;
+}
+
+.hero-elements img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-elements .logo {
+    max-width: 40%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-elements .hero-character-left,
+.hero-elements .hero-character-right {
+    position: absolute;
+}
+
+.hero-elements .hero-character-left {
+    max-width: 40%;
+    top: 26%;
+    left: 13%;
+}
+
+.hero-elements .hero-character-right {
+    max-width: 36%;
+    top: 26%;
+    right: 22%;
+}
+
+.hero-elements .falling-leaves-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+/* End Hero */
+
+/* Start Gameplay */
+.gameplay .gameplay-video-frame {
+    position: absolute;
+    background-image: url(../images/video-1-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 53%;
+    height: 41%;
+    left: 5%;
+    top: 9%;
+}
+
+.gameplay .gameplay-video-frame .gameplay-video-content video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 39%;
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gameplay .gameplay-character {
+    position: absolute;
+    width: 41%;
+    right: 5%;
+    top: 17%;
+}
+
+.gameplay-2 {
+    margin-top: -47%;
+    z-index: 12;
+    position: relative;
+}
+
+.gameplay-2 .gameplay-video-frame {
+    position: absolute;
+    background-image: url(../images/video-2-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 54%;
+    height: 26%;
+    right: 5%;
+    top: 5%;
+}
+
+.gameplay-2 .gameplay-video-frame-2 {
+    position: absolute;
+    background-image: url(../images/video-3-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 54%;
+    height: 26%;
+    left: 5%;
+    top: 35%;
+}
+
+.gameplay-2 .gameplay-video-frame-3 {
+    position: absolute;
+    background-image: url(../images/video-4-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 54%;
+    height: 26%;
+    right: 5%;
+    top: 65%;
+    z-index: 2;
+}
+
+.gameplay-2 .gameplay-video-frame .gameplay-video-content video,
+.gameplay-2 .gameplay-video-frame-2 .gameplay-video-content video,
+.gameplay-2 .gameplay-video-frame-3 .gameplay-video-content video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 39%;
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gameplay-2 .gameplay-2-character {
+    position: absolute;
+    width: 45%;
+    left: 1%;
+    top: 70%;
+}
+
+.gameplay-2 .gameplay-3-character {
+    position: absolute;
+    width: 35%;
+    right: 1%;
+    top: 29%;
+}
+/* End Gameplay */
+
+/* Start Download */
+.download {
+    margin-top: -12%;
+    position: relative;
+    z-index: 12;
+}
+.download P {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 34%;
+}
+.download .falling-leaves {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7%;
+}
+
+.download .download-character {
+    max-width: 55%;
+    position: absolute;
+    right: 0;
+    bottom: 21%;
+}
+
+.download .download-how-to {
+    text-align: center;
+    max-width: 43%;
+    position: absolute;
+    left: 5%;
+    bottom: 40%;
+    z-index: 15;
+}
+
+.download .download-how-to .button-buy-aren {
+    width: 30%;
+    text-align: center;
+    margin: -40px auto 40px auto;
+}
+
+.download .download-aren {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download .download-aren a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+/* End Download */
+
+/* Start Footer */
+.footer {
+    position: relative;
+    margin-top: -5%;
+}
+
+.footer-inner {
+    position: relative;
+    padding: 100px 0;
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.footer .footer-whitepaper {
+    width: 20%;
+    /*position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .footer-downloadwhitepaper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 0 50px 0;
+    /*position: absolute;
+    left: 0;
+    right: 0;
+    top: 48%;
+    */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .footer-downloadwhitepaper a {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social {
+    /*position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.footer-social .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.footer-social .social-icon a img {
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icon a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-content {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+.footer-content img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-content .footer-content-left img {
+    width: 150px;
+    height: 100%;
+}
+
+.footer-content .footer-content-middle {
+    text-transform: uppercase;
+}
+
+.footer-content .footer-content-middle .footer-content-middle-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.footer-content .footer-content-right,
+.footer-content .footer-content-middle .footer-content-middle-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-copyright {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+}
+
+/* End Footer */
+
+/* Start Popup */
+.aren-popup {
+    width: 25%;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    background-image: url(../images/popup-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 8px;
+}
+
+.aren-popup.hide {
+    display: none;
+}
+
+.aren-popup .close {
+    max-width: 3.625rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    cursor: pointer;
+}
+
+.aren-popup .popup-image {
+    border-radius: 5px;
+}
+
+.aren-popup .epic-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End Popoup */

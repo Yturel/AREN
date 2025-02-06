@@ -1,0 +1,184 @@
+@media (max-width: 1920px) {
+}
+#loading img {
+	width: auto;
+	height: auto;
+}
+
+@media (max-width: 1600px) {
+	.download p{
+		margin: 0 auto 20px auto;
+	}
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1200px) {
+	.download p{
+		margin-top: -5px;
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.download .download-how-to .button-buy-aren {
+		margin: -25px auto 30px auto;
+	}
+
+	.download .download-aren {
+		gap: 40px;
+	}
+
+	.footer .footer-downloadwhitepaper {
+		gap: 25px;
+	}
+
+	.download p{
+		margin: 0 auto 20px auto;
+	}
+
+}
+
+@media (max-width: 880px) {
+
+	.download .download-how-to .button-buy-aren {
+		margin: -25px auto 20px auto;
+	}
+
+	.download .download-aren {
+		gap: 30px;
+	}
+
+	.footer .footer-downloadwhitepaper {
+		gap: 25px;
+	}
+
+	.aren-popup {
+		padding: 7px;
+	}
+
+	.aren-popup .close {
+		max-width: 2.625rem;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.header,
+	.hero-elements .logo {
+		display: none;
+	}
+
+	.header-mobile {
+		display: block;
+	}
+
+	.download .download-how-to .button-buy-aren {
+		margin: -18px auto 20px auto;
+	}
+
+	.download .download-aren {
+		gap: 30px;
+	}
+	.download p{
+		margin-top: -5px;
+		font-size: 0.8rem;
+	}
+
+	.footer .footer-downloadwhitepaper {
+		gap: 25px;
+	}
+
+	.footer-inner {
+		padding: 100px 50px;
+	}
+
+	.footer-content {
+		gap: 100px;
+	}
+
+	.footer-content img {
+		width: 35px;
+	}
+
+	.footer-content .footer-content-left img {
+		width: 120px;
+	}
+
+	.aren-popup {
+		display: none;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.header {
+		top: 2%;
+	}
+
+	#loading img {
+    	width: 200px;
+    	height: auto;
+	}
+
+	.download .download-how-to .button-buy-aren {
+		margin: -8px auto 15px auto;
+	}
+
+	.download .download-aren {
+		gap: 20px;
+	}
+	.download p{
+		margin-top: -4px;
+		font-size: 5px;
+	}
+
+	.footer .footer-downloadwhitepaper {
+		gap: 15px;
+	}
+
+	.footer-inner {
+		padding: 100px 50px;
+	}
+
+	.footer .footer-whitepaper {
+		width: 30%;
+	}
+
+	.footer .footer-downloadwhitepaper a {
+		width: 35%;
+	}
+
+	.footer .footer-downloadwhitepaper {
+		padding: 20px 0 30px 0;
+	}
+
+	.footer-social {
+		width: 40%;
+	}
+
+	.footer-content {
+		flex-wrap: wrap;
+    	gap: 30px;
+    	flex-direction: column;
+	}
+
+}
+
+@media (max-width: 390px) {
+
+}
+
+@media (max-width: 360px) {
+
+}
